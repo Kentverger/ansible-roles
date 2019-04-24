@@ -73,10 +73,10 @@
     append: yes
     groups: ssl-cert
 
-- name: copy cert to host system
-  become: yes
-  fetch:
-    src: /etc/ssl/certs/{{ hostname }}.crt
-    dest: '{{ certpath }}/ssl/certs/{{ hostname }}.crt'
-    flat: yes
-  when: trust_cert != 0
+# - name: copy cert to host system
+#   become: yes
+#   fetch:
+#     src: /etc/ssl/certs/{{ hostname }}.crt
+#     dest: '{{ certpath }}/ssl/certs/{{ hostname }}.crt'
+#     flat: yes
+#   when: trust_cert != 0
